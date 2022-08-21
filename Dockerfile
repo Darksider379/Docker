@@ -13,5 +13,7 @@ RUN chown remote_user:remote_user -R /home/remote_user/.ssh/ && \
 chmod 600 /home/remote_user/.ssh/authorized_keys
 
 RUN /usr/sbin/sshd-keygen
+RUN yum install -y mysql
+RUN yum install awscli -y
 
 CMD /usr/sbin/sshd -D
