@@ -14,6 +14,8 @@ services:
     image: remote-host
     build:
       context: centos7
+    volumes:
+      - "$PWD/MysqlDB_Backup_to_AWS_s3.sh:/tmp/MysqlDB_Backup_to_AWS_s3.sh"
     networks:
       - net
   db_host:
