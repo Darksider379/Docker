@@ -15,5 +15,8 @@ chmod 600 /home/remote_user/.ssh/authorized_keys
 RUN /usr/sbin/sshd-keygen
 RUN yum install -y mysql
 RUN yum install awscli -y
+RUN yum install -y epel-release
+RUN yum install -y ansible
+
 
 CMD /usr/sbin/sshd -D
